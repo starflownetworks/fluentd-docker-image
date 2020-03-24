@@ -1,4 +1,4 @@
-FROM fluentd:v1.6-1
+FROM fluentd:v1.9-1
 
 USER root
 
@@ -7,7 +7,7 @@ RUN apk add --no-cache --virtual .build-deps \
         ruby-dev \
      && gem install \
         fluent-plugin-amqp:0.13.0 \
-        fluent-plugin-s3:1.2.1 \
+        fluent-plugin-s3:1.3.0 \
      && gem sources --clear-all \
      && apk del .build-deps \
      && rm -rf /var/cache/apk/* \
