@@ -8,6 +8,7 @@ RUN apk add --no-cache --virtual .build-deps \
      && gem install \
         fluent-plugin-amqp:0.13.0 \
         fluent-plugin-s3:1.3.0 \
+        fluent-plugin-cloudwatch-logs:0.9.4 \
      && gem sources --clear-all \
      && apk del .build-deps \
      && rm -rf /var/cache/apk/* \
